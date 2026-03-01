@@ -1,0 +1,343 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Support — Matrix Digital Media"
+  description="Get help with HiveHelper and other apps by Matrix Digital Media LLC."
+>
+  <Header />
+
+  <main class="support-page">
+    <div class="container">
+
+      <div class="support-header">
+        <a href="/" class="back-link">← Home</a>
+        <h1>Support</h1>
+        <p class="meta">We're here to help. Reach us at <a href="mailto:support@matrixnj.com">support@matrixnj.com</a></p>
+      </div>
+
+      <!-- CONTACT CARD -->
+      <div class="contact-card">
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <p>
+            For bug reports, feature requests, account issues, or any other questions,
+            email us directly. We typically respond within 1–2 business days.
+          </p>
+          <a href="mailto:support@matrixnj.com" class="btn-contact">
+            Email Support
+          </a>
+        </div>
+        <div class="contact-detail">
+          <p class="contact-label">Email</p>
+          <p class="contact-value">support@matrixnj.com</p>
+          <p class="contact-label">Response time</p>
+          <p class="contact-value">1–2 business days</p>
+          <p class="contact-label">Publisher</p>
+          <p class="contact-value">Matrix Digital Media LLC</p>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <div class="faq-header">
+          <h2>HiveHelper — Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>How do I add a hive?</summary>
+            <p>
+              From the main screen, tap <strong>Add Hive</strong> and fill in the hive name
+              and any optional details such as hive type and acquisition date. Your hive will
+              appear on the home screen once saved.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I log an inspection?</summary>
+            <p>
+              Tap on any hive to open its detail view, then tap <strong>New Inspection</strong>.
+              Work through the checklist — queen status, brood pattern, honey stores, and more.
+              You can add notes and photos before saving.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is included in the free tier?</summary>
+            <p>
+              The free tier includes up to <strong>2 hives</strong>, inspection history for the
+              last <strong>60 days</strong>, and <strong>2 AI guidance</strong> uses. Upgrading
+              to HiveHelper Pro removes all limits and unlocks unlimited hives, full history,
+              and unlimited AI guidance.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I upgrade to Pro?</summary>
+            <p>
+              Tap the <strong>Upgrade</strong> prompt when you hit a free tier limit, or access
+              it through the app settings. HiveHelper Pro is available as a monthly or annual
+              subscription, both with a <strong>7-day free trial</strong>. Payment is processed
+              securely through Apple.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I restore my purchase?</summary>
+            <p>
+              If you've previously subscribed and need to restore access, open the paywall screen
+              and tap <strong>Restore Purchases</strong>. Make sure you're signed into the same
+              Apple ID used for the original purchase.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I cancel my subscription?</summary>
+            <p>
+              Subscriptions are managed through your Apple ID. Go to
+              <strong>Settings → [Your Name] → Subscriptions</strong> on your iPhone to view
+              and cancel your HiveHelper Pro subscription at any time.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is my data backed up?</summary>
+            <p>
+              All your inspection data and photos are stored locally on your device. Your data
+              is included in your iPhone's standard iCloud or iTunes backup if you have backups
+              enabled. We do not store your personal data on our servers.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is AI guidance?</summary>
+            <p>
+              After completing an inspection, HiveHelper can provide AI-powered guidance based
+              on your observations. This feature analyzes the data you entered and offers
+              context-aware suggestions. An internet connection is required to use this feature.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is frame photo analysis?</summary>
+            <p>
+              HiveHelper allows you to upload photos of hive frames for automated analysis via
+              LandLens.ai. This feature is optional and only activates when you explicitly submit
+              a photo for review. Submitted photos are processed by LandLens.ai per their
+              privacy policy.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I delete my data?</summary>
+            <p>
+              You can delete individual inspections or hives from within the app. To remove all
+              data, delete the app from your device. Since all data is stored locally, uninstalling
+              the app permanently removes it.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>I found a bug or the app is crashing.</summary>
+            <p>
+              We're sorry to hear that. Please email us at
+              <a href="mailto:support@matrixnj.com">support@matrixnj.com</a> with a description
+              of the issue, your iPhone model, and iOS version. Screenshots or screen recordings
+              are always helpful.
+            </p>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .support-page {
+    padding-top: calc(var(--header-h) + 4rem);
+    padding-bottom: 4rem;
+  }
+
+  .support-header {
+    max-width: 720px;
+    margin-bottom: 3rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: var(--text); }
+
+  .support-header h1 {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .meta a {
+    color: var(--accent-1);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* CONTACT CARD */
+  .contact-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2.5rem;
+    margin-bottom: 5rem;
+    max-width: 720px;
+  }
+
+  .contact-info h2 {
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-contact {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--gradient);
+    padding: 0.65rem 1.4rem;
+    border-radius: 7px;
+    transition: opacity 0.2s;
+  }
+
+  .btn-contact:hover { opacity: 0.85; }
+
+  .contact-label {
+    font-family: var(--font-head);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+  }
+
+  .contact-label:first-child { margin-top: 0; }
+
+  .contact-value {
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  /* FAQ */
+  .faq-section {
+    max-width: 720px;
+  }
+
+  .faq-header {
+    margin-bottom: 2rem;
+  }
+
+  .faq-header h2 {
+    font-family: var(--font-head);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 0;
+  }
+
+  .faq-item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item summary {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-top: 0.75rem;
+    padding-right: 2rem;
+  }
+
+  .faq-item a {
+    color: var(--accent-1);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  @media (max-width: 600px) {
+    .contact-card {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
