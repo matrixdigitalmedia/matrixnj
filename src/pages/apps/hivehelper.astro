@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="HiveHelper — Matrix Digital Media"
+  description="The complete inspection logbook for hobbyist beekeepers. Log hive health, track observations, and get AI-powered guidance."
+>
+  <Header />
+
+  <main class="app-page">
+    <div class="container">
+
+      <div class="app-hero">
+        <a href="/#apps" class="back-link">← All Apps</a>
+
+        <div class="app-header">
+          <div class="app-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="24,3 42,13 42,35 24,45 6,35 6,13" fill="url(#h-bg)" opacity="0.2"/>
+              <polygon points="24,3 42,13 42,35 24,45 6,35 6,13" fill="none" stroke="url(#h-grad)" stroke-width="1.5"/>
+              <polygon points="24,12 34,18 34,30 24,36 14,30 14,18" fill="url(#h-grad)" opacity="0.5"/>
+              <defs>
+                <linearGradient id="h-bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f59e0b"/>
+                  <stop offset="100%" stop-color="#f97316"/>
+                </linearGradient>
+                <linearGradient id="h-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f59e0b"/>
+                  <stop offset="100%" stop-color="#f97316"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <div class="app-title-row">
+              <h1 class="app-title">HiveHelper</h1>
+              <span class="app-badge">iOS</span>
+            </div>
+            <p class="app-category">Lifestyle · Beekeeping</p>
+          </div>
+        </div>
+
+        <p class="app-tagline">
+          The complete inspection logbook for hobbyist beekeepers.
+        </p>
+
+        <div class="app-actions">
+          <span class="btn-store btn-store--soon">Coming to the App Store</span>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature">
+          <h3>Hive Inspections</h3>
+          <p>Log every inspection with structured checklists — queen status, brood patterns, honey stores, and more.</p>
+        </div>
+        <div class="feature">
+          <h3>AI Guidance</h3>
+          <p>Get context-aware recommendations after each inspection, powered by GPT-4o mini.</p>
+        </div>
+        <div class="feature">
+          <h3>Photo Logs</h3>
+          <p>Attach photos to any inspection and build a visual history of each hive over time.</p>
+        </div>
+        <div class="feature">
+          <h3>Offline First</h3>
+          <p>Works entirely without a connection. Your data stays on your device, always available.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .app-page {
+    padding-top: calc(var(--header-h) + 4rem);
+    padding-bottom: 4rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: var(--text); }
+
+  .app-hero {
+    max-width: 680px;
+    margin-bottom: 5rem;
+  }
+
+  .app-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .app-icon {
+    width: 72px;
+    height: 72px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .app-title {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .app-badge {
+    font-family: var(--font-head);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-3);
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+  }
+
+  .app-category {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .app-tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .btn-store--soon {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+  }
+
+  .feature h3 {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+</style>

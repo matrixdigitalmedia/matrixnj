@@ -1,0 +1,76 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Matrix Digital Media',
+  description = 'We build apps people actually use.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;1,14..32,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg:           #080810;
+    --bg-card:      #0f0f1a;
+    --bg-card-hover:#141422;
+    --border:       #1c1c2e;
+    --text:         #eeeef8;
+    --text-muted:   #7070a0;
+    --accent-1:     #6366f1;
+    --accent-2:     #a855f7;
+    --accent-3:     #06b6d4;
+    --gradient:     linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --font-head:    'Space Grotesk', sans-serif;
+    --font-body:    'Inter', sans-serif;
+    --max-w:        1100px;
+    --header-h:     64px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+</style>

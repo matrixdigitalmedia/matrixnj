@@ -1,0 +1,105 @@
+---
+---
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="Matrix Digital Media home">
+      <svg class="logo-mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="14" height="14" rx="3" fill="url(#lg)"/>
+        <rect x="19" y="1" width="14" height="14" rx="3" fill="url(#lg)" opacity="0.5"/>
+        <rect x="1" y="19" width="14" height="14" rx="3" fill="url(#lg)" opacity="0.5"/>
+        <rect x="19" y="19" width="14" height="14" rx="3" fill="url(#lg)"/>
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#6366f1"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-text">
+        MATRIX<span class="logo-sub"> DIGITAL MEDIA</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/#apps" class="nav-link">Apps</a>
+      <a href="mailto:hello@matrixnj.com" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--header-h);
+    background: rgba(8, 8, 16, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-text {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text);
+  }
+
+  .logo-sub {
+    font-weight: 400;
+    opacity: 0.55;
+    font-size: 0.8rem;
+    letter-spacing: 0.07em;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-family: var(--font-head);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover { color: var(--text); }
+
+  .nav-cta {
+    font-family: var(--font-head);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--gradient);
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+</style>
