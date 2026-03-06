@@ -171,7 +171,7 @@ import Footer from '../../components/Footer.astro';
 
   .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     gap: 1.5rem;
   }
 
@@ -193,5 +193,20 @@ import Footer from '../../components/Footer.astro';
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .app-page {
+      padding-top: calc(var(--header-h) + 2rem);
+      padding-bottom: 2rem;
+    }
+
+    .app-hero {
+      margin-bottom: 3rem;
+    }
+
+    .app-title {
+      font-size: 1.6rem;
+    }
   }
 </style>
