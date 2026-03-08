@@ -19,19 +19,20 @@ import Footer from '../../components/Footer.astro';
         <div class="app-header">
           <div class="app-icon">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="24,3 42,13 42,35 24,45 6,35 6,13" fill="url(#h-bg)" opacity="0.2"/>
-              <polygon points="24,3 42,13 42,35 24,45 6,35 6,13" fill="none" stroke="url(#h-grad)" stroke-width="1.5"/>
-              <polygon points="24,12 34,18 34,30 24,36 14,30 14,18" fill="url(#h-grad)" opacity="0.5"/>
               <defs>
-                <linearGradient id="h-bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#f59e0b"/>
-                  <stop offset="100%" stop-color="#f97316"/>
-                </linearGradient>
+                <radialGradient id="h-bg-stone" cx="50%" cy="45%" r="70%">
+                  <stop offset="0%" stop-color="#FDF6EC"/>
+                  <stop offset="100%" stop-color="#E8DDD0"/>
+                </radialGradient>
                 <linearGradient id="h-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stop-color="#f59e0b"/>
                   <stop offset="100%" stop-color="#f97316"/>
                 </linearGradient>
               </defs>
+              <rect width="48" height="48" rx="11" fill="url(#h-bg-stone)"/>
+              <polygon points="24,3 42,13 42,35 24,45 6,35 6,13" fill="url(#h-grad)" opacity="0.25"/>
+              <polygon points="24,3 42,13 42,35 24,45 6,35 6,13" fill="none" stroke="url(#h-grad)" stroke-width="1.5"/>
+              <polygon points="24,12 34,18 34,30 24,36 14,30 14,18" fill="url(#h-grad)" opacity="0.80"/>
             </svg>
           </div>
           <div>
@@ -109,8 +110,6 @@ import Footer from '../../components/Footer.astro';
   .app-icon {
     width: 72px;
     height: 72px;
-    background: rgba(245, 158, 11, 0.08);
-    border: 1px solid rgba(245, 158, 11, 0.2);
     border-radius: 18px;
     display: flex;
     align-items: center;
